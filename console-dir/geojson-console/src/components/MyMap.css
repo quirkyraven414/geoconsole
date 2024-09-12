@@ -1,0 +1,21 @@
+.leaflet-container{
+    background-color: green;
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+  }
+  
+.map-wrapper {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+  
+.map {
+height: 80vh; /* Adjust height as needed */
+width: 80vw; /* Adjust width as needed */
+margin-left: 10vw;
+}
