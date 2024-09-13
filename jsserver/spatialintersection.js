@@ -8,7 +8,7 @@ app.use(cors());
 
 
 // MongoDB connection URI
-const uri = 'mongodb://localhost:27017';
+const uri = 'mongodb://mongo:27017';
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.post('/tiles', async (req, res) => {

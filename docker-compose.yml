@@ -3,22 +3,21 @@ version: '3'
 services:
   frontend:
     build:
-      context: ./path-to-react
+      context: ./console-dir/geojson-console
     ports:
       - "3000:80"
 
   backend:
     build:
-      context: ./path-to-node
+      context: ./jsserver
     ports:
       - "3001:3001"
-    environment:
-      - MONGODB_URI=mongodb://mongo:27017/mydatabase
     depends_on:
       - mongo
 
   mongo:
     image: mongo:latest
+    restart: always
     ports:
       - "27017:27017"
     volumes:
